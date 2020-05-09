@@ -1,0 +1,17 @@
+import random
+
+class SetOfNumbers:
+    def generateSet(self):
+        numbersset = []
+        random.seed()
+        for i in range(0, 6):
+            number = random.randint(1, 49)
+            while numbersset.count(number) != 0:
+                number = random.randint(1, 49)
+            numbersset.append(number)
+        numbersset.sort()
+        print(numbersset)
+
+
+print('Losujemy!')
+SetOfNumbers().generateSet()
